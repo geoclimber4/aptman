@@ -1,3 +1,3 @@
 get '/' do 
-	redirect '/sessions/login'
+	redirect '/properties'
 end

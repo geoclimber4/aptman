@@ -4,7 +4,6 @@ class CreateTenants < ActiveRecord::Migration
   		t.string :first_name, :null => false
   		t.string :last_name, :null => false
   		t.integer :phone
-  		t.integer :unit_id
 
   		t.timestamps
   	end
