@@ -4,9 +4,8 @@ class CreateUnits < ActiveRecord::Migration
   		t.string :address, :null => false
   		t.string :name, :null => false
   		t.string :size
-  		t.integer :rent_amount
+  		t.string :rent_amount
   		t.integer :property_id
-  		t.integer :tenant_id
 
   		t.timestamps
   	end

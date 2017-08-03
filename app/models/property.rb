@@ -4,4 +4,5 @@ class Property < ActiveRecord::Base
   # Remember to create a migration!
   has_many :property_managers
   has_many :units
+  has_many :tenants, through: :units
 end

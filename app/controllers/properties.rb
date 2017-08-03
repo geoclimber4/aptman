@@ -21,6 +21,7 @@ post '/properties' do
 end
 
 get '/properties/:id' do
+	@tenants = Tenant.all
 	@property = Property.find(params[:id])
 	@manager = PropertyManager.find_by property_id: params[:id]
 

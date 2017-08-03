@@ -2,7 +2,7 @@ class CreateProperties < ActiveRecord::Migration
   def change
   	create_table :properties do |t|
   		t.string :name, :null => false
-  		t.integer	:phone
+  		t.string	:phone
   		t.string :building_address
 
   		t.timestamps
