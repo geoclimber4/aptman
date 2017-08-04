@@ -1,0 +1,7 @@
+<h1>display all properties here</h1>
+
+<div class="container">
+	<% @properties.each do |property| %>
+	<p><a href="/properties/<%= property.id %>"><%= property.name %></a></p>
+	<% end %>	
+</div>

@@ -1,0 +1,24 @@
+<h1>Property Summary Page</h1>
+
+
+<h3>Property Name: <%= @property.name %></h3>
+<h3>Property Phone: <%= @property.phone %></h3>
+<h3>Property <%= @property.building_address %></h3>
+<% if @manager %>
+	<h3>Manager is <%= @manager.user.user_name %></h3>
+<% end %>
+
+<ul>
+	<% @tenants.each do |tenant| %>
+	<li class='tenant-list'>
+			<p><a href="/tenants/<%= tenant.id %>"><%= tenant.full_name %></a>
+			<p><%= tenant.phone %></p>    
+
+	</li>
+	<% end %>
+</ul>
+
+
+<% if @manager.id == current_user.id %>
+	<a href="/tenants/new">Add a New Tenant</a>
+<% end %>
